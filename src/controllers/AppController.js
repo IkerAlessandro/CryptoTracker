@@ -47,6 +47,7 @@ export const setNewUserEventListeners = () => {
     newUserBtn.addEventListener('click', async () => {
         updateUserList(newUser);
         window.currentUser = newUser;
+        localStorage.setItem('username', newUser.username)
         renderDashborad();
     });
 };
